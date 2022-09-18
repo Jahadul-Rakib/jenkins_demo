@@ -8,11 +8,5 @@ public class VirtualThreadDemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run (VirtualThreadDemoApplication.class, args);
-        test();
     }
-
-    private static void test() {
-
-    }
-
 }
