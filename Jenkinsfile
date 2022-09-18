@@ -1,12 +1,25 @@
-pipeline{
+pipeline {
     agent any
+    environment {
+        STAGE = "UTG"
+    }
+
     stages {
-            stage ('Build') {
-                steps {
-                        sh 'ls'
-//                         sh 'mvn -f pom.xml clean package -DskipTests -U -e'
-//                         sh 'java -jar /target/*.jar'
-                }
+        stage('Build') {
+            steps {
+                echo 'shell script.....${STAGE}'
             }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'pwd'
+            }
+            steps {
+                sh 'ls'
+            }
+            steps {
+                sh 'ls -a'
+            }
+        }
     }
 }
