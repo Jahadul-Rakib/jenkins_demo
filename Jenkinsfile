@@ -4,6 +4,8 @@ pipeline{
             stage ('Build') {
                 steps {
                         echo 'Running build phase...'
+                        sh 'pws'
+                        sh 'ls'
                 }
             }
     }
