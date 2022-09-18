@@ -1,13 +1,9 @@
 pipeline {
     agent any
-    environment {
-        STAGE = "UTG"
-    }
-
     stages {
         stage('Build') {
             steps {
-                sh 'echo ${STAGE}'
+                sh 'echo "hello"'
             }
         }
         stage('Deployment') {
