@@ -7,10 +7,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'shell script.....${STAGE}'
+                sh 'echo ${STAGE}'
             }
         }
-        stage('Deploy') {
+        stage('Deployment') {
             steps {
                 sh 'pwd'
             }
